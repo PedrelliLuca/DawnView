@@ -2,9 +2,6 @@
 
 #include "DawnView/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace DawnView {
 
 	// Events are currently blocking, meaning that when an event occurs it

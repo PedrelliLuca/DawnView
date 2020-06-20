@@ -1,8 +1,6 @@
 #pragma once
 #include "Event.h"
 
-#include <sstream>
-
 namespace DawnView {
 
 	class DV_API MouseMovedEvent : public Event

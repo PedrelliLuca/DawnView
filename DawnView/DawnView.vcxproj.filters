@@ -4,6 +4,9 @@
     <Filter Include="DawnView">
       <UniqueIdentifier>{EA398E85-D606-E990-FF1F-D738EB4B1E1F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DawnView\Events">
+      <UniqueIdentifier>{8E5AD661-FAE5-4326-03F7-C61A6F01A026}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\DawnView.h" />
@@ -16,13 +19,22 @@
     <ClInclude Include="src\DawnView\EntryPoint.h">
       <Filter>DawnView</Filter>
     </ClInclude>
+    <ClInclude Include="src\DawnView\Events\ApplicationEvent.h">
+      <Filter>DawnView\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DawnView\Events\Event.h">
+      <Filter>DawnView\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DawnView\Events\KeyEvent.h">
+      <Filter>DawnView\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DawnView\Events\MouseEvent.h">
+      <Filter>DawnView\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\DawnView\Log.h">
       <Filter>DawnView</Filter>
     </ClInclude>
-    <ClInclude Include="src\DawnView\Events\Event.h" />
-    <ClInclude Include="src\DawnView\Events\KeyEvent.h" />
-    <ClInclude Include="src\DawnView\Events\MouseEvent.h" />
-    <ClInclude Include="src\DawnView\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\dvpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\DawnView\Application.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="src\DawnView\Log.cpp">
       <Filter>DawnView</Filter>
     </ClCompile>
+    <ClCompile Include="src\dvpch.cpp" />
   </ItemGroup>
 </Project>

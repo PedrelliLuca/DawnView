@@ -18,6 +18,11 @@ project "DawnView"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
+	-- specify which header file is our pre-compiled header
+	pchheader "dvpch.h"
+	-- for visual studio. Will be ignored for other kinds of platforms. Needs full path.
+	pchsource "DawnView/src/dvpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
