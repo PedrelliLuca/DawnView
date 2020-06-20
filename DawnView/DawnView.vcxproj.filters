@@ -19,6 +19,10 @@
     <ClInclude Include="src\DawnView\Log.h">
       <Filter>DawnView</Filter>
     </ClInclude>
+    <ClInclude Include="src\DawnView\Events\Event.h" />
+    <ClInclude Include="src\DawnView\Events\KeyEvent.h" />
+    <ClInclude Include="src\DawnView\Events\MouseEvent.h" />
+    <ClInclude Include="src\DawnView\Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\DawnView\Application.cpp">

@@ -26,7 +26,8 @@ project "DawnView"
 
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{prj.name}/src"
 	}
 
 	 -- Everything below only applies to windows 

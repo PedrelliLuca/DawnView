@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DV_PLATFORM_WINDOWS;DV_BUILD_DLL;DV_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -143,10 +143,14 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\DawnView\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\DawnView\Events\KeyEvent.h" />
     <ClInclude Include="src\DawnView.h" />
     <ClInclude Include="src\DawnView\Application.h" />
     <ClInclude Include="src\DawnView\Core.h" />
     <ClInclude Include="src\DawnView\EntryPoint.h" />
+    <ClInclude Include="src\DawnView\Events\Event.h" />
+    <ClInclude Include="src\DawnView\Events\MouseEvent.h" />
     <ClInclude Include="src\DawnView\Log.h" />
   </ItemGroup>
   <ItemGroup>

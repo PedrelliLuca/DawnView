@@ -10,3 +10,4 @@
 	#error DawnView only supports Windows!
 #endif // DV_PLATFORM_WINDOWS
 
+#define BIT(x) (1 << x)
