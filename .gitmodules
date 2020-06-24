@@ -1,3 +1,6 @@
 [submodule "DawnView/vendor/spdlog"]
 	path = DawnView/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "DawnView/vendor/GLFW"]
+	path = DawnView/vendor/GLFW
+	url = https://github.com/PedrelliLuca/glfw.git

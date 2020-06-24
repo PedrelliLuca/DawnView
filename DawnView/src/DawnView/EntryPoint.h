@@ -12,8 +12,6 @@ int main(int argc, char** argv)
 
 	// example of usage
 	DV_CORE_WARN("Initialized Core Log!");
-	int a = 5;
-	DV_INFO("Hello! a={0}", a);
 
 	// heap allocate because sandboxes can be very large
 	auto application = DawnView::CreateApplication();

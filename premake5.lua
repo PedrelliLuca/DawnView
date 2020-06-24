@@ -10,6 +10,12 @@ workspace "DawnView"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories that aren't ours, relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "DawnView/vendor/GLFW/include"
+
+include "DawnView/vendor/GLFW"
+
 project "DawnView"
 	location "DawnView"
 	kind "SharedLib"
@@ -32,7 +38,14 @@ project "DawnView"
 	includedirs
 	{
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/src"
+		"%{prj.name}/src",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	 -- Everything below only applies to windows 
@@ -53,7 +66,11 @@ project "DawnView"
 		}
 
 	filter "configurations:Debug"
-		defines "DV_DEBUG"
+		defines 
+		{
+			"DV_DEBUG",
+			"DV_ENABLE_ASSERT"
+		}
 		symbols "On" -- Debug symbols turned on 
 
 	filter "configurations:Release"

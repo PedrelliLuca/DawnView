@@ -1,5 +1,6 @@
 #pragma once
 
+#include "dvpch.h"
 #include "DawnView/Core.h"
 
 namespace DawnView {
@@ -55,14 +56,14 @@ namespace DawnView {
 	class DV_API EventDispatcher
 	{
 		template<typename T>
-		using EventFunc = std::function<bool(T&)>;
+		using EventFn = std::function<bool(T&)>;
 
 	public:
 		EventDispatcher(Event& event)
 			: m_Event(event) {}
 
 		template<typename T>
-		bool Dispatch(EventFunc<T> func) const
+		bool Dispatch(EventFn<T> func) const
 		{
 			if (m_Event.GetEventType == T::GetStaticType())
 			{

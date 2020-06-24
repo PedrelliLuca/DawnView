@@ -8,6 +8,8 @@ namespace DawnView {
 
 	Application::Application()
 	{
+		// You need to wrap Window::Create() because unique_ptr constructor is explicit
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -16,15 +18,9 @@ namespace DawnView {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			DV_TRACE(e); // logging the WindowResizeEvent
+			m_Window->OnUpdate();  
 		}
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			DV_TRACE(e); // logging the WindowResizeEvent
-		}
-		while (true);
 	}
 }
